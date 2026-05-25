@@ -7,48 +7,77 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2341515531476978"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-2341515531476978">
+    <meta name="description" content="AI를 통해 가을이 고양이와 당신의 닮은꼴을 테스트해보세요. 재미있는 동물상 테스트!">
+    <meta name="keywords" content="동물상 테스트, 가을이, 고양이, AI 테스트, 닮은꼴 찾기, 테이러블 머신">
+    <meta property="og:title" content="가을이 고양이 동물상 테스트">
+    <meta property="og:description" content="나와 가장 닮은 고양이는? 가을이 고양이 동물상 테스트로 확인해보세요!">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <button id="theme-toggle">모드 전환</button>
-        <h1>가을이 고양이 동물상 테스트</h1>
+        <header>
+            <button id="theme-toggle">모드 전환</button>
+            <h1>가을이 고양이 동물상 테스트</h1>
+            <p class="subtitle">인공지능(AI)이 분석하는 나와 가을이의 닮은꼴 지수</p>
+        </header>
         
-        <div class="test-section">
+        <main class="test-section">
             <div id="upload-area" class="upload-area">
-                <p>사진을 드래그하거나 클릭하여 업로드하세요</p>
+                <div class="upload-icon">📸</div>
+                <p>정면 사진을 업로드하여 분석을 시작하세요</p>
+                <p class="small-text">(사진은 어디에도 저장되지 않으니 안심하세요)</p>
                 <input type="file" id="image-input" accept="image/*" hidden>
             </div>
             
             <div id="loading" class="loading" style="display: none;">
-                <p>분석 중...</p>
+                <div class="spinner"></div>
+                <p>AI가 이미지를 분석하고 있습니다...</p>
             </div>
 
             <div id="result-area" class="result-area" style="display: none;">
                 <img id="preview-image" src="" alt="미리보기">
                 <div id="label-container" class="label-container"></div>
-                <button id="retry-btn">다시 하기</button>
+                <button id="retry-btn">다른 사진으로 테스트하기</button>
             </div>
-        </div>
+        </main>
+
+        <section class="info-section">
+            <h2>사용 방법</h2>
+            <ul>
+                <li>얼굴이 잘 보이는 정면 사진을 준비해주세요.</li>
+                <li>업로드 박스를 클릭하거나 사진을 드래그하여 넣어주세요.</li>
+                <li>잠시만 기다리면 AI가 가을이와 고양이 상을 분석해줍니다.</li>
+                <li>결과를 친구들과 공유해보세요!</li>
+            </ul>
+        </section>
 
         <div class="contact-form">
-            <h2>제휴 문의</h2>
+            <h2>제휴 및 서비스 문의</h2>
             <form action="https://formspree.io/f/mjgzbanw" method="POST">
                 <div class="form-group">
                     <label for="email">이메일 주소:</label>
                     <input type="email" id="email" name="email" required placeholder="your@email.com">
                 </div>
                 <div class="form-group">
-                    <label for="message">메시지:</label>
-                    <textarea id="message" name="message" required placeholder="문의 내용을 입력하세요..."></textarea>
+                    <label for="message">문의 내용:</label>
+                    <textarea id="message" name="message" required placeholder="서비스 개선 제안이나 제휴 문의를 남겨주세요..."></textarea>
                 </div>
                 <button type="submit" id="submit-btn">문의 보내기</button>
             </form>
         </div>
 
         <div id="disqus_thread"></div>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" onclick="alert('본 서비스는 재미를 위한 AI 테스트입니다.')">서비스 소개</a> | 
+            <a href="#" onclick="alert('사용자의 사진은 서버에 저장되지 않으며 브라우저 내에서만 처리됩니다.')">개인정보처리방침</a> | 
+            <a href="#" onclick="alert('본 웹사이트의 모든 콘텐츠는 저작권법의 보호를 받습니다.')">이용약관</a>
+        </div>
+        <p class="copyright">&copy; 2024 가을이 고양이 동물상 테스트. All rights reserved.</p>
+    </footer>
 
     <!-- TensorFlow.js and Teachable Machine Image library -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
