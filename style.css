@@ -1,149 +1,200 @@
 :root {
     --bg-color: #121212;
     --text-color: #ffffff;
-    --btn-bg: #4CAF50;
-    --btn-text: white;
+    --accent-color: #4CAF50;
+    --secondary-bg: #1e1e1e;
+    --border-color: #333;
 }
 
 body.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #121212;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --secondary-bg: #ffffff;
+    --border-color: #dee2e6;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     margin: 0;
+    padding: 20px;
     transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     position: relative;
+    padding-top: 60px;
 }
 
 #theme-toggle {
     position: absolute;
-    top: -50px;
+    top: 0;
     right: 0;
     padding: 8px 16px;
     cursor: pointer;
     background-color: var(--text-color);
     color: var(--bg-color);
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 14px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
+    word-break: keep-all;
 }
 
-#generate-btn {
-    background-color: var(--btn-bg);
-    color: var(--btn-text);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+.test-section {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.upload-area {
+    border: 3px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 3rem 1rem;
     cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
-.contact-form {
-    margin-top: 4rem;
-    padding: 2rem;
-    border: 1px solid var(--text-color);
-    border-radius: 8px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+.upload-area:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(76, 175, 80, 0.05);
 }
 
-.contact-form h2 {
-    margin-bottom: 1.5rem;
+.upload-area p {
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.loading {
+    padding: 2rem;
+}
+
+.result-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.label-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result-bar-wrapper {
+    text-align: left;
+}
+
+.result-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    height: 24px;
+    background-color: var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+#retry-btn {
+    padding: 12px 32px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#retry-btn:hover {
+    background-color: #1976D2;
+}
+
+.contact-form {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     text-align: left;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    font-size: 0.9rem;
 }
 
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
     background-color: var(--bg-color);
     color: var(--text-color);
-}
-
-.form-group textarea {
-    height: 100px;
-    resize: vertical;
+    font-size: 1rem;
 }
 
 #submit-btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #2196F3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-#submit-btn:hover {
-    background-color: #0b7dda;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 #disqus_thread {
     margin-top: 4rem;
     width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-#generate-btn:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.result {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.ball {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    .test-section { padding: 1rem; }
 }

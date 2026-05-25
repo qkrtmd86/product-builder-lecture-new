@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>가을이 고양이 동물상 테스트</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <button id="theme-toggle">Switch Theme</button>
-        <h1>Lotto Number Generator</h1>
-        <div class="generator">
-            <button id="generate-btn">Generate Numbers</button>
-            <div id="result" class="result"></div>
+        <button id="theme-toggle">모드 전환</button>
+        <h1>가을이 고양이 동물상 테스트</h1>
+        
+        <div class="test-section">
+            <div id="upload-area" class="upload-area">
+                <p>사진을 드래그하거나 클릭하여 업로드하세요</p>
+                <input type="file" id="image-input" accept="image/*" hidden>
+            </div>
+            
+            <div id="loading" class="loading" style="display: none;">
+                <p>분석 중...</p>
+            </div>
+
+            <div id="result-area" class="result-area" style="display: none;">
+                <img id="preview-image" src="" alt="미리보기">
+                <div id="label-container" class="label-container"></div>
+                <button id="retry-btn">다시 하기</button>
+            </div>
         </div>
 
         <div class="contact-form">
-            <h2>Partnership Inquiry</h2>
+            <h2>제휴 문의</h2>
             <form action="https://formspree.io/f/mjgzbanw" method="POST">
                 <div class="form-group">
-                    <label for="email">Email address:</label>
+                    <label for="email">이메일 주소:</label>
                     <input type="email" id="email" name="email" required placeholder="your@email.com">
                 </div>
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required placeholder="Enter your inquiry here..."></textarea>
+                    <label for="message">메시지:</label>
+                    <textarea id="message" name="message" required placeholder="문의 내용을 입력하세요..."></textarea>
                 </div>
-                <button type="submit" id="submit-btn">Send Inquiry</button>
+                <button type="submit" id="submit-btn">문의 보내기</button>
             </form>
         </div>
 
         <div id="disqus_thread"></div>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
+
+    <!-- TensorFlow.js and Teachable Machine Image library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
