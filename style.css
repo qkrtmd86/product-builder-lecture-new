@@ -117,6 +117,57 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+.faq-section {
+    text-align: left;
+    background-color: var(--secondary-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.faq-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.faq-item p {
+    color: #777;
+    line-height: 1.6;
+}
+
+.about-model {
+    text-align: left;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.about-model h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.about-model p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.update-info {
+    font-size: 0.8rem;
+    color: #999 !important;
+    margin-top: 1rem;
+}
+
 .footer {
     margin-top: 4rem;
     padding: 2rem 0;

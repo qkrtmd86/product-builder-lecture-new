@@ -43,13 +43,35 @@
         </main>
 
         <section class="info-section">
-            <h2>사용 방법</h2>
+            <h2>사용 방법 및 주의사항</h2>
             <ul>
                 <li>얼굴이 잘 보이는 정면 사진을 준비해주세요.</li>
                 <li>업로드 박스를 클릭하거나 사진을 드래그하여 넣어주세요.</li>
-                <li>잠시만 기다리면 AI가 가을이와 고양이 상을 분석해줍니다.</li>
-                <li>결과를 친구들과 공유해보세요!</li>
+                <li>AI가 사진의 특징을 분석하여 가을이와 고양이 상을 비교합니다.</li>
+                <li><strong>보안 안내:</strong> 업로드된 사진은 서버로 전송되지 않으며, 사용자의 브라우저 내에서 즉시 분석 후 삭제됩니다.</li>
             </ul>
+        </section>
+
+        <section class="faq-section">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Q. 이 서비스는 무료인가요?</h3>
+                <p>A. 네, 가을이 고양이 동물상 테스트는 누구나 무료로 이용하실 수 있습니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 제 사진이 저장되지는 않나요?</h3>
+                <p>A. 본 서비스는 Google의 TensorFlow.js 기술을 사용하여 브라우저에서 직접 분석을 수행합니다. 따라서 사진 데이터는 어디에도 저장되지 않습니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 어떤 AI 모델을 사용하나요?</h3>
+                <p>A. Google Teachable Machine을 통해 학습된 딥러닝 모델을 사용하여 이미지의 특징 점을 추출하고 비교 분석합니다.</p>
+            </div>
+        </section>
+
+        <section class="about-model">
+            <h2>기술 정보</h2>
+            <p>본 사이트는 인공지능 이미지 분류 기술을 활용하여 제작되었습니다. 수천 장의 가을이 고양이 이미지와 일반 고양이 데이터를 학습한 신경망 모델이 사용자의 외모적 특징을 분석하여 가장 높은 확률의 동물상을 제시합니다.</p>
+            <p class="update-info">최근 업데이트: 2024년 5월 (AI 모델 정확도 개선 및 UI 최적화)</p>
         </section>
 
         <div class="contact-form">
