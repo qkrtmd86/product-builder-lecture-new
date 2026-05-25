@@ -1,3 +1,20 @@
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    themeToggle.textContent = 'Dark Mode';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const isLight = body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    themeToggle.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+});
+
 document.getElementById('generate-btn').addEventListener('click', () => {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
